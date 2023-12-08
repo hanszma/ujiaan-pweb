@@ -1,10 +1,11 @@
-import express from "express";
-import cors from "cors";
-import UserRoute from "./routers/UserRoute.js";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "bulma/css/bulma.css";
 
-const app = express();
-app.use(cors());
-app.use(express.json());
-app.use(UserRoute);
-
-app.listen(5000, () => console.log("Server up and running"));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
